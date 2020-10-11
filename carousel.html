@@ -12,6 +12,7 @@
         height:100vh;
         overflow:hidden;
         background-image:url('images/spaceTwinkle.gif');
+        background-position:center;
       }
 
       .main{
@@ -42,7 +43,7 @@
 
         position:absolute;
         left:-10%;
-        top:50%;
+        top:60%;
         transform:translate(-50%, -50%);
       }
 
@@ -230,6 +231,7 @@
       <div class="card"><img src="images/pkm/150.png"></div>
       <div class="card"><img src="images/pkm/151.png"></div>
     </div>
+
     <script>
       let theta = Math.PI * 0.01324;
       let new_theta = 0.0;
@@ -253,12 +255,12 @@
       });
 
       document.addEventListener('wheel', event => {
-        let scroll_speed = event.deltaY * 0.002;
+        let scroll_speed = (event.deltaY / 360) * 20;   //This is to put the wheel in terms of 360 instead of degrees
         wheel_theta = wheel_theta + scroll_speed;
-        wheel.style.transform = `translate(-50%, -50%) rotate(${wheel_theta * (Math.PI)}deg)`;
+        wheel.style.transform = `translate(-50%, -50%) rotate(${wheel_theta}deg)`;
 
-        cards.forEach(card => {
-          card.style.transform = `translate(-50%, -50%) rotate(${-1.0 * wheel_theta * (Math.PI)}deg)`;
+        cards.forEach(card => { //for loop, forEach card/(pokemon)
+          card.style.transform = `translate(-50%, -50%) rotate(${-1.0 * wheel_theta}deg)`;  //allows images to stay up right.
         });
       });
     </script>
