@@ -4,6 +4,36 @@
     <meta charset="utf-8">
     <title>Space Pokedex Home Page</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyCqE5_3G5kJB1rWvLHOGRlt_V5TCtwjxJw",
+        authDomain: "spacedex-project-2179f.firebaseapp.com",
+        databaseURL: "https://spacedex-project-2179f.firebaseio.com",
+        projectId: "spacedex-project-2179f",
+        storageBucket: "spacedex-project-2179f.appspot.com",
+        messagingSenderId: "536238363421",
+        appId: "1:536238363421:web:51675b6918de284f8d47f4",
+        measurementId: "G-L7H3H24KM8"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+    <script src="app.js" defer></script>
+
   </head>
   <body>
     <div class="main">
